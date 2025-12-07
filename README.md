@@ -48,7 +48,7 @@ Designed to be:
 | `ir-blaster.yaml` | Main ESPHome firmware |
 | `ir-blaster-bme.yaml` | Main ESPHome firmware & BME680 |
 | `lovelace-remote.yaml` | Home Assistant dashboard control card |
-| `images/` | Optional wiring diagrams & photos |
+| `images/` | Photos of built device *future addition* |
 
 ---
 
