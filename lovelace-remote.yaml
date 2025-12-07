@@ -1,0 +1,150 @@
+type: vertical-stack
+cards:
+  - type: markdown
+    content: |
+      ## 🎛️ SMSL Amplifier Remote
+      Use the controls below to operate your SMSL amp via IR.
+
+  # --- POWER / MUTE / INPUT ---
+  - type: grid
+    columns: 3
+    square: true
+    cards:
+      - type: button
+        name: Power
+        icon: mdi:power
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_power
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_power
+
+      - type: button
+        name: Mute
+        icon: mdi:volume-mute
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_mute
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_mute
+
+      - type: button
+        name: Input
+        icon: mdi:video-input-hdmi
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_input
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_input
+
+  # --- D-PAD WITH UP / DOWN ---
+  - type: grid
+    columns: 3
+    square: true
+    cards:
+      - type: button
+        name: Up
+        icon: mdi:chevron-up
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_up
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_up
+
+      - type: button
+        name: OK
+        icon: mdi:checkbox-blank-circle
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_ok
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_ok
+
+      - type: button
+        name: Down
+        icon: mdi:chevron-down
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_down
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_down
+
+  - type: grid
+    columns: 3
+    square: true
+    cards:
+      - type: button
+        name: Left
+        icon: mdi:arrow-left
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_left
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_left
+
+      - type: button
+        name: EQ
+        icon: mdi:equalizer
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_eq
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_eq
+
+      - type: button
+        name: Right
+        icon: mdi:arrow-right
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_right
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_right
+
+  # --- VOLUME CONTROLS ---
+  - type: grid
+    columns: 2
+    square: true
+    cards:
+      - type: button
+        name: Vol -
+        icon: mdi:volume-minus
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_volume_down
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_volume_down
+
+      - type: button
+        name: Vol +
+        icon: mdi:volume-plus
+        icon_height: 40px
+        entity: button.ir_blaster_smsl_volume_up
+        tap_action:
+          action: perform-action
+          perform_action: button.press
+          target:
+            entity_id: button.ir_blaster_smsl_volume_up
+
+grid_options:
+  columns: 12
+  rows: auto
