@@ -3,10 +3,9 @@
 A compact ESPHome-powered infrared blaster for controlling **SMSL amplifiers** via **Home Assistant**, with optional **BME680 environmental monitoring**.
 
 Designed to be:
-- ✅ Fully stateless (no IR desync issues)
-- ✅ OTA-safe for ESP8266 (ESP-01 1MB)
-- ✅ Reliable even when using the physical remote
-- ✅ Simple and low-maintenance
+- Fully stateless
+- Simple and low-maintenance
+- Easy to automate via standard Homeassistant automations, scenes and scripts
 
 ---
 
@@ -36,8 +35,8 @@ Designed to be:
 ## 🛠 Hardware Used
 
 - ESP8266 (ESP-01 1MB / D1 Mini)
-- IR LED + N-channel MOSFET driver
-- BME680 sensor (I²C)
+- IR LED + N-channel MOSFET / Transistor driver
+- BME680 sensor - I²C - _(Optional)_
 - 3.3V power supply
 
 ---
@@ -47,6 +46,7 @@ Designed to be:
 | File | Description |
 |------|------------|
 | `ir-blaster.yaml` | Main ESPHome firmware |
+| `ir-blaster-bme.yaml` | Main ESPHome firmware & BME680 |
 | `lovelace-remote.yaml` | Home Assistant dashboard control card |
 | `images/` | Optional wiring diagrams & photos |
 
@@ -68,15 +68,7 @@ Designed to be:
 - No volume, EQ, or power state is tracked internally.
 - This prevents desync if the physical remote is used.
 - All buttons always send raw IR commands.
-
----
-
-## 📷 Optional Enhancements
-
-- Custom enclosure
-- Multiple IR LEDs for room coverage
-- Additional appliance control (TV, DAC, etc.)
-- Long-press volume via Home Assistant automations
+- Intentionally kept simple to avoid over-engineering and complex state handling.
 
 ---
 
