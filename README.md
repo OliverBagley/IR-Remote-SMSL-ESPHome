@@ -1,4 +1,5 @@
 # ESPHome SMSL Q5 Remote IR Control
+
 A simple ESPHome-based IR blaster for controlling **SMSL amplifiers** from **Home Assistant**.  
 Built around an ESP8266 and designed to be reliable, stateless, and easy to live with day-to-day.
 
@@ -99,10 +100,10 @@ This does **not** increase the price for you, but helps support any future devel
 | Up            | Same as Volume Up |
 | Down          | Same as Volume Down |
 
-Tested against common models such as:
-- SMSL AD18  
-- SMSL AO200  
-- SMSL DO100  
+Tested against common models such as SMSL Q5 and SMSL AO200, but should work with any SMSL (and perhaps other brands products) that use the below IR remote
+<p>
+<img src="https://raw.githubusercontent.com/OliverBagley/IR-Remote-SMSL-ESPHome/main/images/SMSLQ5RemoteControl.avif" width="275" alt="SMSL Remote">
+</p>
 
 ---
 
@@ -119,9 +120,7 @@ It provides:
 ---
 
 ## Licence
-
 MIT License.  
-You’re free to use, modify and redistribute this project, including for commercial use.
 
 ---
 https://www.oliverbagley.com
